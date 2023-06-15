@@ -8,10 +8,14 @@
         "url": "https://github.com/vojtatom/laz.ts"
     },
     "keywords": [
-        "metacity",
-        "visualization",
-        "shapefile",
-        "esri"
+        "las",
+        "laz",
+        "point cloud",
+        "pointcloud",
+        "wasm",
+        "webassembly",
+        "decoder",
+        "parser"
     ],
     "author": {
         "name": "Vojtěch Tomas",
