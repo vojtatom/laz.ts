@@ -1,0 +1,49 @@
+{
+    "name": "lazts",
+    "private": false,
+    "version": "0.0.1",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vojtatom/laz.ts"
+    },
+    "keywords": [
+        "metacity",
+        "visualization",
+        "shapefile",
+        "esri"
+    ],
+    "author": {
+        "name": "Vojtěch Tomas",
+        "email": "hello@vojtatom.cz",
+        "url": "https://vojtatom.cz"
+    },
+    "license": "MIT",
+    "files": [
+        "dist/**/*"
+    ],
+    "main": "./dist/lazts.umd.js",
+    "module": "./dist/lazts.js",
+    "types": "./dist/lazts.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/lazts.js",
+            "require": "./dist/lazts.umd.js"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "test": "vitest --no-threads"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.3",
+        "vite": "^4.1.0",
+        "vite-plugin-dts": "^2.0.0-beta.3",
+        "vitest": "^0.30.1"
+    },
+    "dependencies": {
+        "laz-perf": "^0.0.6"
+    }
+}
