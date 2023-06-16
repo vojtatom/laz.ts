@@ -1,4 +1,4 @@
-# LAZ.ts 🗺️
+# LAZ.ts ⠇⠁⠵
 
 TypeScript package for loading LAS/LAZ, primary developed for for WebGL applications, intended for lazy people who just want to load their point clouds and don't care about the details.
 

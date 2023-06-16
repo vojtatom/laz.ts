@@ -1,17 +1,21 @@
 {
     "name": "lazts",
     "private": false,
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "module",
     "repository": {
         "type": "git",
         "url": "https://github.com/vojtatom/laz.ts"
     },
     "keywords": [
-        "metacity",
-        "visualization",
-        "shapefile",
-        "esri"
+        "las",
+        "laz",
+        "point cloud",
+        "pointcloud",
+        "wasm",
+        "webassembly",
+        "decoder",
+        "parser"
     ],
     "author": {
         "name": "Vojtěch Tomas",
