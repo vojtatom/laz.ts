@@ -8,8 +8,22 @@ test('Basic test LAZ', async () => {
     console.log(data);
 });
 
-test('Basic test LAA', async () => {
+test('Basic test LAS', async () => {
     const buffer = openFileAsArray('testdata/test.las');
     const data = await parse(buffer);
     console.log(data);
+});
+
+test('Basic test no offset LAZ', async () => {
+    const buffer = openFileAsArray('testdata/testNoOffset.laz');
+    const data = await parse(buffer);
+    console.log(data);
+    data.header.offset.forEach((v) => expect(v).toBeCloseTo(0));
+
+    const dataAdjusted = await parse(buffer, {
+        adjustOffset: true,
+    });
+
+    console.log(dataAdjusted);
+    dataAdjusted.header.offset.forEach((v) => expect(v).not.toBeCloseTo(0));
 });

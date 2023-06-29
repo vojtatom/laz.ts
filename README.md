@@ -13,11 +13,6 @@ TypeScript package for loading LAS/LAZ, primary developed for for WebGL applicat
 npm install lazts
 ```
 
-| Branch  |                                                                                                                                                                            |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Release | [![LAZts CI Release](https://github.com/vojtatom/laz.ts/actions/workflows/ci.yaml/badge.svg?branch=release)](https://github.com/vojtatom/laz.ts/actions/workflows/ci.yaml) |
-| Dev     | [![LAZts CI Dev](https://github.com/vojtatom/laz.ts/actions/workflows/ci.yaml/badge.svg?branch=dev)](https://github.com/vojtatom/laz.ts/actions/workflows/ci.yaml)         |
-
 ## Usage
 
 ```ts
@@ -52,4 +47,12 @@ interface LazData {
         color0?: { value: Uint8Array; size: 4 };
     };
 }
+```
+
+When working with funky coordinates (e.g. the coordinates are too big and there is no offset), you can use the `adjustOffset` option:
+
+```ts
+const dataWithNonZeroOffset = await parse(buffer, {
+    adjustOffset: true,
+});
 ```
